@@ -10,7 +10,7 @@ import { Toaster } from "@/components/ui/toaster"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Surajit Jana - Portfolio",
+  title: "Surajit | Portfolio",
   description: "Full Stack Developer & MERN Specialist",
   icons: {
     icon: '/favicon.svg',
