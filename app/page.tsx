@@ -67,14 +67,14 @@ export default function HomePage() {
                     Book a Call
                   </Button>
                 </BookingModal>
-                /*
+                {/*
                 <ResumeDownload>
                   <Button variant="outline" size="lg" className="group">
                     <Download className="mr-2 h-4 w-4 group-hover:bounce transition-transform" />
                     Download CV
                   </Button>
                 </ResumeDownload>
-                */
+                */}
               </div>
               <div className="flex items-center space-x-4">
                 <Link
