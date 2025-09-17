@@ -23,7 +23,7 @@ export function Footer() {
               <Twitter className="h-5 w-5" />
               <span className="sr-only">Twitter</span>
             </Link>
-            <Link href="mailto:surajitjana20107@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
+            <Link href="mailto:surajitdev20107@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
               <Mail className="h-5 w-5" />
               <span className="sr-only">Email</span>
             </Link>
