@@ -157,7 +157,7 @@ export default function ContactPage() {
               <CardContent className="space-y-6">
                 {[
                   { icon: Mail, label: "Email", value: "surajitdev20107@gmail.com", href: "mailto:surajitdev20107@gmail.com" },
-                  // { icon: Phone, label: "Phone", value: "+91 9330975907", href: "tel:+91 9330975907" },
+                  // { icon: Phone, label: "Phone", value: "+91 1234567890", href: "tel:+91 1234567890" },
                   { icon: MapPin, label: "Location", value: "Kolkata, IN", href: "#" },
                 ].map((item, index) => (
                   <div
