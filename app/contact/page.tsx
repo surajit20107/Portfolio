@@ -187,12 +187,14 @@ export default function ContactPage() {
                     Schedule a Meeting
                   </Button>
                 </BookingModal>
+                {/*
                 <ResumeDownload>
                   <Button variant="outline" className="w-full group">
                     <Download className="mr-2 h-4 w-4 group-hover:bounce transition-transform" />
                     Download Resume
                   </Button>
                 </ResumeDownload>
+                */}
                 <Button variant="outline" className="w-full group" asChild>
                   <Link href="/projects">
                     <Github className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
