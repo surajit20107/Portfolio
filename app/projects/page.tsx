@@ -40,7 +40,7 @@ const projects = [
     featured: false,
   },
   {
-    title: "Dish Dive | Dive into Flavors & Cook with Confidence",
+    title: "Dish Dive",
     description:
       "Dish Dive is a modern recipe discovery web application built with Next.js and React. It allows users to search for recipes by name, browse dishes by category, and explore detailed information for each meal, including ingredients, step-by-step instructions, and video tutorials.",
     image: "/placeholder.svg?height=300&width=400",
@@ -51,7 +51,7 @@ const projects = [
     featured: false,
   },
   {
-    title: "TodoFy | Simplify Your Day",
+    title: "TodoFy",
     description:
       "TodoFy is a clean, intuitive to-do web app designed to help you stay focused and productive. Whether you're managing daily tasks, planning projects, or organizing your life, TodoFy makes it easy to capture, prioritize, and complete your goals—anytime, anywhere. With smart features and a distraction-free interface, getting things done has never felt this good.",
     image: "/placeholder.svg?height=300&width=400",
