@@ -7,6 +7,8 @@ import { AnimatedBackground } from "@/components/animated-background"
 import { BookingModal } from "@/components/booking-modal"
 import { ResumeDownload } from "@/components/resume-download"
 
+export const resume_url = "https://drive.google.com/file/d/1d1ta-3cXmlE8sxQkYMlre2p8GTuClcag/view?usp=drivesdk";
+
 export default function HomePage() {
   const feturedProjects = [
     {
@@ -67,14 +69,16 @@ export default function HomePage() {
                     Book a Call
                   </Button>
                 </BookingModal>
-                {/*
-                <ResumeDownload>
+                
+                <div>
+                <Link href={resume_url} target="_blank">
                   <Button variant="outline" size="lg" className="group">
                     <Download className="mr-2 h-4 w-4 group-hover:bounce transition-transform" />
                     Download CV
                   </Button>
-                </ResumeDownload>
-                */}
+                  </Link>
+                </div>
+                
               </div>
               <div className="flex items-center space-x-4">
                 <Link
