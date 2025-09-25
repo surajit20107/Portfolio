@@ -6,7 +6,7 @@ import Link from "next/link"
 import { AnimatedBackground } from "@/components/animated-background"
 import { BookingModal } from "@/components/booking-modal"
 
-export const resume_url = "https://drive.google.com/file/d/1d1ta-3cXmlE8sxQkYMlre2p8GTuClcag/view?usp=drivesdk";
+export const resume_url = "https://drive.google.com/file/d/1mekXLeNV3LM1bHsGlQl7TfKdHVd3aAXy/view?usp=drivesdk"
 
 export default function HomePage() {
   const feturedProjects = [
