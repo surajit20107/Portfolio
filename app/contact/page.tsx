@@ -24,7 +24,7 @@ import {
 import Link from "next/link"
 import { useToast } from "@/hooks/use-toast"
 import { BookingModal } from "@/components/booking-modal"
-import { ResumeDownload } from "@/components/resume-download"
+import { resume_url } from "@/app/page"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -187,14 +187,16 @@ export default function ContactPage() {
                     Schedule a Meeting
                   </Button>
                 </BookingModal>
-                {/*
-                <ResumeDownload>
-                  <Button variant="outline" className="w-full group">
-                    <Download className="mr-2 h-4 w-4 group-hover:bounce transition-transform" />
-                    Download Resume
-                  </Button>
-                </ResumeDownload>
-                */}
+                
+                <div>
+                  <Link href={resume_url} target="_blank">
+                    <Button variant="outline" className="w-full group">
+                      <Download className="mr-2 h-4 w-4 group-hover:bounce transition-transform" />
+                      Download Resume
+                    </Button>
+                  </Link>
+                </div>
+                
                 <Button variant="outline" className="w-full group" asChild>
                   <Link href="/projects">
                     <Github className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
