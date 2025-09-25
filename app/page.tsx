@@ -70,11 +70,11 @@ export default function HomePage() {
                 </BookingModal>
                 
                 <div>
-                <Link href={resume_url} target="_blank">
-                  <Button variant="outline" size="lg" className="group">
-                    <Download className="mr-2 h-4 w-4 group-hover:bounce transition-transform" />
-                    Download CV
-                  </Button>
+                  <Link href={resume_url} target="_blank">
+                    <Button variant="outline" size="lg" className="group">
+                      <Download className="mr-2 h-4 w-4 group-hover:bounce transition-transform" />
+                      Download CV
+                    </Button>
                   </Link>
                 </div>
                 
