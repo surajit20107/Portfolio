@@ -5,7 +5,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { AnimatedBackground } from "@/components/animated-background"
 import { BookingModal } from "@/components/booking-modal"
-import { ResumeDownload } from "@/components/resume-download"
 
 export const resume_url = "https://drive.google.com/file/d/1d1ta-3cXmlE8sxQkYMlre2p8GTuClcag/view?usp=drivesdk";
 
