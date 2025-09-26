@@ -7,11 +7,33 @@ import Link from "next/link"
 
 const projects = [
   {
+    title: "Ticket Pilot",
+    description:
+      "Ai-Ticket-Agent is an intelligent, automated ticket management system powered by artificial intelligence. This project aims to streamline the support ticket lifecycle by leveraging AI for fast, accurate classification, assignment, and resolution of incoming requests.",
+    image: "/placeholder.svg?height=300&width=400",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "Express", "Inngest", "Agent-Kit", "MongoDB", "Zod", "Nodemailer", "Bcrypt", "JWT"],
+    liveUrl: "https://ticket-pilot.vercel.app",
+    githubUrl: "https://github.com/surajit20107/Ai-Ticket-Agent",
+    date: "2025",
+    featured: true,
+  },
+  {
+    title: "Joke Crowd",
+    description:
+      "A simple RESTful API built with the Gin web framework in Go for managing a collection of jokes. This project is designed for learning and practicing how to build, structure, and interact with APIs using Gin.",
+    image: "/placeholder.svg?height=300&width=400",
+    technologies: ["Gin", "GORM", "PostgreSQL", "UUID", "Validator", "JWT"],
+    liveUrl: "https://golang-jokes-api.onrender.com",
+    githubUrl: "https://github.com/surajit20107/JokeCrowd",
+    date: "2025",
+    featured: true,
+  },
+  {
     title: "E-Commerce Platform",
     description:
       "A full-stack e-commerce solution built with Node.js, Express & Ejs, featuring user authentication, payment processing, and admin dashboard.",
     image: "/placeholder.svg?height=300&width=400",
-    technologies: ["Node.js", "Express", "Stripe", "Mongodb", "Tailwind CSS"],
+    technologies: ["Node.js", "Express", "Mongodb", "Tailwind CSS"],
     liveUrl: "https://scatch-vabj.onrender.com",
     githubUrl: "https://github.com/surajit20107/Scatch",
     date: "2025",
