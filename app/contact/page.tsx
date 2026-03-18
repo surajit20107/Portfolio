@@ -1,13 +1,13 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-import { Label } from "@/components/ui/label"
+import { useState } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 import {
   Mail,
   Phone,
@@ -20,11 +20,11 @@ import {
   MessageCircle,
   Loader2,
   Download,
-} from "lucide-react"
-import Link from "next/link"
-import { useToast } from "@/hooks/use-toast"
-import { BookingModal } from "@/components/booking-modal"
-import { resume_url } from "@/app/page"
+} from "lucide-react";
+import Link from "next/link";
+import { useToast } from "@/hooks/use-toast";
+import { BookingModal } from "@/components/booking-modal";
+import { resume_url } from "@/app/page";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -32,40 +32,69 @@ export default function ContactPage() {
     email: "",
     subject: "",
     message: "",
-  })
-  const [isLoading, setIsLoading] = useState(false)
-  const { toast } = useToast()
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsLoading(true)
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY as string,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data?.success) {
+        toast({
+          title: "Message sent successfully! 🚀",
+          description:
+            "Thanks for reaching out! I'll get back to you within 24 hours.",
+        });
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      }
+    } catch (error) {
+      toast({
+        title: "Failed to send message! ❌",
+        description: "Something went wrong! Please try again later.",
+      });
+    } finally {
+      setIsLoading(false);
+    }
 
     // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    // await new Promise((resolve) => setTimeout(resolve, 2000));
+  };
 
-    toast({
-      title: "Message sent successfully! 🚀",
-      description: "Thanks for reaching out! I'll get back to you within 24 hours.",
-    })
-
-    setFormData({ name: "", email: "", subject: "", message: "" })
-    setIsLoading(false)
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
-    }))
-  }
+    }));
+  };
 
   return (
     <div className="container px-4 py-20">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-4">Get In Touch</h1>
-          <p className="text-xl text-muted-foreground">Let's discuss your next project or just say hello</p>
+          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl mb-4">
+            Get In Touch
+          </h1>
+          <p className="text-xl text-muted-foreground">
+            Let's discuss your next project or just say hello
+          </p>
         </div>
 
         <div className="grid gap-12 lg:grid-cols-2">
@@ -131,7 +160,11 @@ export default function ContactPage() {
                     className="transition-all duration-200 focus:scale-[1.02]"
                   />
                 </div>
-                <Button type="submit" className="w-full group relative overflow-hidden" disabled={isLoading}>
+                <Button
+                  type="submit"
+                  className="w-full group relative overflow-hidden"
+                  disabled={isLoading}
+                >
                   {isLoading ? (
                     <>
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
@@ -156,9 +189,19 @@ export default function ContactPage() {
               </CardHeader>
               <CardContent className="space-y-6">
                 {[
-                  { icon: Mail, label: "Email", value: "surajitdev20107@gmail.com", href: "mailto:surajitdev20107@gmail.com" },
+                  {
+                    icon: Mail,
+                    label: "Email",
+                    value: "surajitdev20107@gmail.com",
+                    href: "mailto:surajitdev20107@gmail.com",
+                  },
                   // { icon: Phone, label: "Phone", value: "+91 1234567890", href: "tel:+91 1234567890" },
-                  { icon: MapPin, label: "Location", value: "Kolkata, IN", href: "#" },
+                  {
+                    icon: MapPin,
+                    label: "Location",
+                    value: "Kolkata, IN",
+                    href: "#",
+                  },
                 ].map((item, index) => (
                   <div
                     key={index}
@@ -187,7 +230,7 @@ export default function ContactPage() {
                     Schedule a Meeting
                   </Button>
                 </BookingModal>
-                
+
                 <div>
                   <Link href={resume_url} target="_blank">
                     <Button variant="outline" className="w-full group">
@@ -196,7 +239,7 @@ export default function ContactPage() {
                     </Button>
                   </Link>
                 </div>
-                
+
                 <Button variant="outline" className="w-full group" asChild>
                   <Link href="/projects">
                     <Github className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
@@ -213,9 +256,21 @@ export default function ContactPage() {
               <CardContent>
                 <div className="flex gap-4">
                   {[
-                    { icon: Github, href: "https://github.com/surajit20107", color: "hover:bg-gray-900 hover:text-white" },
-                    { icon: Linkedin, href: "https://linkedin.com/in/surajit-jana20107", color: "hover:bg-blue-600 hover:text-white" },
-                    { icon: Twitter, href: "https://twitter.com/surajit_20107", color: "hover:bg-blue-400 hover:text-white" },
+                    {
+                      icon: Github,
+                      href: "https://github.com/surajit20107",
+                      color: "hover:bg-gray-900 hover:text-white",
+                    },
+                    {
+                      icon: Linkedin,
+                      href: "https://linkedin.com/in/surajit-jana20107",
+                      color: "hover:bg-blue-600 hover:text-white",
+                    },
+                    {
+                      icon: Twitter,
+                      href: "https://twitter.com/surajit_20107",
+                      color: "hover:bg-blue-400 hover:text-white",
+                    },
                   ].map((social, index) => (
                     <Link
                       key={index}
@@ -237,11 +292,13 @@ export default function ContactPage() {
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
                     <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                    <span className="font-medium text-green-700 dark:text-green-400">Available for new projects</span>
+                    <span className="font-medium text-green-700 dark:text-green-400">
+                      Available for new projects
+                    </span>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    I'm currently accepting new freelance projects and full-time opportunities. Let's discuss how we can
-                    work together!
+                    I'm currently accepting new freelance projects and full-time
+                    opportunities. Let's discuss how we can work together!
                   </p>
                 </div>
               </CardContent>
@@ -250,5 +307,5 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
