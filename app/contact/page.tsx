@@ -70,9 +70,6 @@ export default function ContactPage() {
     } finally {
       setIsLoading(false);
     }
-
-    // Simulate API call
-    // await new Promise((resolve) => setTimeout(resolve, 2000));
   };
 
   const handleChange = (
