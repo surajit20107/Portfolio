@@ -1,31 +1,42 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { ArrowRight, Download, Github, Linkedin, Calendar, Sparkles } from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-import { AnimatedBackground } from "@/components/animated-background"
-import { BookingModal } from "@/components/booking-modal"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  ArrowRight,
+  Download,
+  Github,
+  Linkedin,
+  Mail,
+  BriefcaseBusiness,
+  Sparkles,
+} from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { AnimatedBackground } from "@/components/animated-background";
 
-export const resume_url = "https://drive.google.com/file/d/1mekXLeNV3LM1bHsGlQl7TfKdHVd3aAXy/view?usp=drivesdk"
+export const resume_url =
+  "https://drive.google.com/file/d/1mekXLeNV3LM1bHsGlQl7TfKdHVd3aAXy/view?usp=drivesdk";
 
 export default function HomePage() {
   const feturedProjects = [
     {
       title: "E-commerce Store",
-      description: "An e-commerce store build with Node.js, Express, Mongodb & Ejs, featuring user authentication, payment processing and admin dashboard.",
+      description:
+        "An e-commerce store build with Node.js, Express, Mongodb & Ejs, featuring user authentication, payment processing and admin dashboard.",
       image: "/placeholder.svg?height=200&width=300",
     },
     {
       title: "Password Manager",
-      description: "Last-Pass build with React, Node.js, Express, Mongodb, Multer & cloudinary. Featuring user authentication, change password, update avatar.",
+      description:
+        "Last-Pass build with React, Node.js, Express, Mongodb, Multer & cloudinary. Featuring user authentication, change password, update avatar.",
       image: "/placeholder.svg?height=200&width=300",
     },
     {
       title: "Portfolio Website",
-      description: "This project showcase my work, skills & The technologies i work with. Also this represents my dev journey ☕",
+      description:
+        "This project showcase my work, skills & The technologies i work with. Also this represents my dev journey ☕",
       image: "/placeholder.svg?height=200&width=300",
-    }
-  ]
+    },
+  ];
   return (
     <div className="flex flex-col relative">
       <AnimatedBackground />
@@ -49,26 +60,41 @@ export default function HomePage() {
                     Surajit
                   </span>
                 </h1>
-                <p className="text-xl text-muted-foreground md:text-2xl">Full Stack Developer & MERN Specialist</p>
+                <p className="text-xl text-muted-foreground md:text-2xl">
+                  Full Stack Developer & MERN Specialist
+                </p>
                 <p className="text-lg text-muted-foreground max-w-[600px]">
-                  I craft robust, scalable, and user-focused web applications using the MERN stack and beyond. Passionate about clean architecture, modern UI/UX, and building end-to-end solutions that solve real-world problems. Let's build something amazing together!
+                  I craft robust, scalable, and user-focused web applications
+                  using the MERN stack and beyond. Passionate about clean
+                  architecture, modern UI/UX, and building end-to-end solutions
+                  that solve real-world problems. Let's build something amazing
+                  together!
                 </p>
               </div>
               <div className="flex flex-col gap-4 sm:flex-row">
-                <Button asChild size="lg" className="group relative overflow-hidden">
+                <Button
+                  asChild
+                  size="lg"
+                  className="group relative overflow-hidden"
+                >
                   <Link href="/projects">
                     <span className="relative z-10">View My Work</span>
                     <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 relative z-10" />
                     <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary opacity-0 group-hover:opacity-100 transition-opacity" />
                   </Link>
                 </Button>
-                <BookingModal>
-                  <Button size="lg" variant="outline" className="group">
-                    <Calendar className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
-                    Book a Call
-                  </Button>
-                </BookingModal>
-                
+
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="flex flex-col gap-4 sm:flex-row"
+                >
+                  <Link href="/contact" className="flex gap-4 justify-center items-center sm:flex-row">
+                    <span>Contact Me</span>
+                    <Mail className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
+                  </Link>
+                </Button>
+
                 <div>
                   <Link href={resume_url} target="_blank">
                     <Button variant="outline" size="lg" className="group">
@@ -77,7 +103,6 @@ export default function HomePage() {
                     </Button>
                   </Link>
                 </div>
-                
               </div>
               <div className="flex items-center space-x-4">
                 <Link
@@ -91,6 +116,12 @@ export default function HomePage() {
                   className="text-muted-foreground hover:text-primary transition-colors hover:scale-110 transform"
                 >
                   <Linkedin className="h-6 w-6" />
+                </Link>
+                <Link
+                  href="mailto:surajitdev20107@gmail.com"
+                  className="text-muted-foreground hover:text-primary transition-colors hover:scale-110 transform"
+                >
+                  <Mail className="h-6 w-6" />
                 </Link>
               </div>
             </div>
@@ -141,9 +172,12 @@ export default function HomePage() {
       <section className="py-20">
         <div className="container px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">Featured Work</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-4">
+              Featured Work
+            </h2>
             <p className="text-lg text-muted-foreground max-w-[600px] mx-auto">
-              Here are some of my recent projects that showcase my skills and creativity.
+              Here are some of my recent projects that showcase my skills and
+              creativity.
             </p>
           </div>
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -163,11 +197,18 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors">{project.title}</h3>
+                  <h3 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors">
+                    {project.title}
+                  </h3>
                   <p className="text-muted-foreground text-sm mb-4">
                     {project.description}
                   </p>
-                  <Button variant="ghost" size="sm" asChild className="group/btn">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    asChild
+                    className="group/btn"
+                  >
                     <Link href="/projects">
                       Learn More
                       <ArrowRight className="ml-2 h-3 w-3 group-hover/btn:translate-x-1 transition-transform" />
@@ -188,5 +229,5 @@ export default function HomePage() {
         </div>
       </section>
     </div>
-  )
+  );
 }
