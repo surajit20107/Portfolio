@@ -7,24 +7,46 @@ import Link from "next/link"
 
 const projects = [
   {
+    title: "Code Hawk",
+    description:
+      "Code Hawk is a powerful AI-powered code review assistant that integrates with GitHub to automate pull request reviews and streamline development workflows. It analyzes code changes, detects potential issues, tracks coding activity, and provides intelligent suggestions to help teams maintain high code quality and improve productivity.",
+    image: "/code-hawk.png",
+    technologies: ["Next.js", "AI-SDK", "Pinecone", "polar", "Prisma", "Inngest", "PostgreSQL", "Octokit", "Better Auth", "Shadcn UI"],
+    liveUrl: "https://code-hawk.vercel.app",
+    githubUrl: "https://github.com/surajit20107/code-hawk",
+    date: "2026",
+    featured: true,
+  },
+  {
+    title: "PPTGenie",
+    description:
+      "PPTGenie is an AI-powered web app built with React, TypeScript, and TanStack that transforms simple prompts into professional presentations. Create, manage, and customize stunning slides instantly using smart AI generation and beautifully designed templates.",
+    image: "/ppt-genei.png",
+    technologies: ["Tanstack Start", "AI-SDK", "pptxgenjs", "Inngest", "PostgreSQL", "Zod", "Better Auth", "Shadcn UI"],
+    liveUrl: "https://ppt-genie.vercel.app",
+    githubUrl: "https://github.com/surajit20107/PPTGenie",
+    date: "2026",
+    featured: true,
+  },
+  {
+    title: "Autonomous Agent",
+    description:
+      "A modern full-stack autonomous AI assistant built with TypeScript, LangChain integrations, and a clean Next.js frontend. The project showcases an extensible agent architecture that connects a responsive web UI to powerful language models with secure tool usage, including Web Search, code generation, public API data fetching, virtual machine-based code execution, and persistent memory support.",
+    image: "/placeholder.svg?height=300&width=400",
+    technologies: ["Next.js", "LangChain", "LangGraph", "Tavily", "Node.js", "Express.js", "Zod", "Virtual Machine"],
+    liveUrl: "https://zevinagent.vercel.app",
+    githubUrl: "https://github.com/surajit20107/Autonomous-Agent",
+    date: "2026",
+    featured: true,
+  },
+  {
     title: "Ticket Pilot",
     description:
       "Ai-Ticket-Agent is an intelligent, automated ticket management system powered by artificial intelligence. This project aims to streamline the support ticket lifecycle by leveraging AI for fast, accurate classification, assignment, and resolution of incoming requests.",
     image: "/placeholder.svg?height=300&width=400",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "Express", "Inngest", "Agent-Kit", "MongoDB", "Zod", "Nodemailer", "Bcrypt", "JWT"],
+    technologies: ["Node.js", "Express", "Mongodb", "Tailwind CSS"],
     liveUrl: "https://ticket-pilot.vercel.app",
     githubUrl: "https://github.com/surajit20107/Ai-Ticket-Agent",
-    date: "2025",
-    featured: true,
-  },
-  {
-    title: "Joke Crowd",
-    description:
-      "A simple RESTful API built with the Gin web framework in Go for managing a collection of jokes. This project is designed for learning and practicing how to build, structure, and interact with APIs using Gin.",
-    image: "/placeholder.svg?height=300&width=400",
-    technologies: ["Gin", "GORM", "PostgreSQL", "UUID", "Validator", "JWT"],
-    liveUrl: "https://golang-jokes-api.onrender.com",
-    githubUrl: "https://github.com/surajit20107/JokeCrowd",
     date: "2025",
     featured: true,
   },
