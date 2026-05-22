@@ -84,6 +84,16 @@ const projects = [
     featured: false,
   },
   {
+    title: "Next Basket",
+    description: "A modern, full-stack e-commerce application built with Next.js 16, TypeScript, and React 19. Demonstrates expertise in full-stack development, real-time caching, authentication systems, and cloud infrastructure.",
+    image: "https://next-basket.vercel.app/opengraph-image",
+    technologies: ["Next.js", "TypeScript", "MongoDB", "Redis", "Better Auth", "Cloudinary", "Shadcn", "NodeMailer", "Tailwind CSS", "SWR & Axios"],
+    liveUrl: "https://next-basket.vercel.app",
+    githubUrl: "https://github.com/surajit20107/Next-Basket",
+    date: "2025",
+    featured: false,
+  },
+  {
     title: "Dish Dive",
     description:
       "Dish Dive is a modern recipe discovery web application built with Next.js and React. It allows users to search for recipes by name, browse dishes by category, and explore detailed information for each meal, including ingredients, step-by-step instructions, and video tutorials.",
@@ -92,28 +102,6 @@ const projects = [
     liveUrl: "https://dish-divee.vercel.app",
     githubUrl: "https://github.com/surajit20107/Dish-Dive",
     date: "2025",
-    featured: false,
-  },
-  {
-    title: "TodoFy",
-    description:
-      "TodoFy is a clean, intuitive to-do web app designed to help you stay focused and productive. Whether you're managing daily tasks, planning projects, or organizing your life, TodoFy makes it easy to capture, prioritize, and complete your goals—anytime, anywhere. With smart features and a distraction-free interface, getting things done has never felt this good.",
-    image: "/placeholder.svg?height=300&width=400",
-    technologies: ["Next.js", "Tailwind CSS", "React Icons", "React Loading Skeleton", "UUID", "TypeScript"],
-    liveUrl: "https://next-todofy.vercel.app",
-    githubUrl: "https://github.com/surajit20107/TodoFy",
-    date: "2025",
-    featured: false,
-  },
-  {
-    title: "Random Jokes Generator",
-    description:
-      "The Random Jokes Generator is a fun and interactive web application built using HTML, CSS, and JavaScript. Its primary function is to display a new random joke each time the user clicks Generate button, offering light-hearted entertainment with just a tap.",
-    image: "/placeholder.svg?height=300&width=400",
-    technologies: ["HTML5", "CSS3", "JavaScript"],
-    liveUrl: "https://randomjokes-gen.netlify.app",
-    githubUrl: "https://github.com/surajit20107/random-jokes",
-    date: "2024",
     featured: false,
   },
 ]
