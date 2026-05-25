@@ -9,7 +9,7 @@ This project is the source code for my personal developer portfolio, beautifully
 - **Responsive Design:** Seamless experience across all devices.
 - **Modern Tech Stack:** Built with TypeScript for reliability and scalability.
 - **Live Preview:** Visit [my portfolio site](https://surajit-dev.netlify.app) to see it in action!
-
+ 
 Whether you’re here for inspiration, collaboration, or just browsing, feel free to explore the code, fork the repo, or reach out for networking and opportunities.
 
 ---
