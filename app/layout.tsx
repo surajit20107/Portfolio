@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
 import Script from "next/script";
+// @ts-ignore: side-effect CSS import handled by Next.js
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
