@@ -97,7 +97,7 @@ const projects = [
     title: "Dish Dive",
     description:
       "Dish Dive is a modern recipe discovery web application built with Next.js and React. It allows users to search for recipes by name, browse dishes by category, and explore detailed information for each meal, including ingredients, step-by-step instructions, and video tutorials.",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "/dish-dive.png",
     technologies: ["Next.js", "Tailwind CSS", "Axios"],
     liveUrl: "https://dish-divee.vercel.app",
     githubUrl: "https://github.com/surajit20107/Dish-Dive",
