@@ -87,7 +87,7 @@ const projects = [
     title: "Next Basket",
     description: "A modern, full-stack e-commerce application built with Next.js 16, TypeScript, and React 19. Demonstrates expertise in full-stack development, real-time caching, authentication systems, and cloud infrastructure.",
     image: "https://next-basket.vercel.app/opengraph-image",
-    technologies: ["Next.js", "TypeScript", "MongoDB", "Redis", "Better Auth", "Cloudinary", "Shadcn", "NodeMailer", "Tailwind CSS", "SWR & Axios"],
+    technologies: ["Next.js", "Redis", "Cloudinary", "TypeScript", "MongoDB", "Better Auth", "Shadcn", "NodeMailer", "Tailwind CSS", "SWR & Axios"],
     liveUrl: "https://next-basket.vercel.app",
     githubUrl: "https://github.com/surajit20107/Next-Basket",
     date: "2025",
