@@ -19,22 +19,22 @@ export const resume_url =
 export default function HomePage() {
   const feturedProjects = [
     {
-      title: "E-commerce Store",
+      title: "Code Hawk",
       description:
-        "An e-commerce store build with Node.js, Express, Mongodb & Ejs, featuring user authentication, payment processing and admin dashboard.",
-      image: "/placeholder.svg?height=200&width=300",
+        "Code Hawk is a powerful AI-powered code review assistant that integrates with GitHub to automate pull request reviews and streamline development workflows. It analyzes code changes, detects potential issues, tracks coding activity, and provides intelligent suggestions to help teams maintain high code quality and improve productivity.",
+      image: "/code-hawk.png",
     },
     {
-      title: "Password Manager",
+      title: "PPTGenie",
       description:
-        "Last-Pass build with React, Node.js, Express, Mongodb, Multer & cloudinary. Featuring user authentication, change password, update avatar.",
-      image: "/placeholder.svg?height=200&width=300",
+        "PPTGenie is an AI-powered web app built with React, TypeScript, and TanStack that transforms simple prompts into professional presentations. Create, manage, and customize stunning slides instantly using smart AI generation and beautifully designed templates.",
+      image: "/ppt-genei.png",
     },
     {
-      title: "Portfolio Website",
+      title: "Dish Dive",
       description:
-        "This project showcase my work, skills & The technologies i work with. Also this represents my dev journey ☕",
-      image: "/placeholder.svg?height=200&width=300",
+        "Dish Dive is a modern recipe discovery web application built with Next.js and React. It allows users to search for recipes by name, browse dishes by category, and explore detailed information for each meal, including ingredients, step-by-step instructions, and video tutorials.",
+      image: "/dish-dive.png",
     },
   ];
   return (
@@ -89,7 +89,10 @@ export default function HomePage() {
                   variant="outline"
                   className="flex flex-col gap-4 sm:flex-row"
                 >
-                  <Link href="/contact" className="flex gap-4 justify-center items-center sm:flex-row">
+                  <Link
+                    href="/contact"
+                    className="flex gap-4 justify-center items-center sm:flex-row"
+                  >
                     <span>Contact Me</span>
                     <Mail className="mr-2 h-4 w-4 group-hover:rotate-12 transition-transform" />
                   </Link>
